@@ -65,6 +65,7 @@ Output format:
   - `text` _(default)_: One line per result like: `<result>:\t<frequency>`
   - `json`: Single line JSON object, where the keys are the results and the values are their frequencies.
   - `csv`: One line per result like: `<result>,<frequency>`, with a single header line `value,frequency`.
+  - `graph`: A visual representation of the relative frequency of each value.
 
 Output format modifiers:
 - `-o-sort=[no|value|freq]` _(default=value)_: Prints the results sorted by value, frequency or not at all.
@@ -121,7 +122,7 @@ stats.median(...)
 Dice simulation:
 ```
 # Throw one 6-sided dice
-dice.sum(6)
+dice(6)
 
 # Throw 2 6-sided dice and add their results
 dice.sum(2, 6)
